@@ -149,6 +149,19 @@
 });</pre>
 	</li>
 
+	<li class="loading-dialog">
+		<div class="ui">
+			<p>A loading dialog</p>
+			<button>Try me!</button>
+		</div>
+		<pre>swal({
+&nbsp;&nbsp;title: <span class="str">"Hold on!"</span>,
+&nbsp;&nbsp;text: <span class="str">"We're loading something here"</span>,
+&nbsp;&nbsp;imageUrl: <span class="str">"images/ajax-loader.gif"</span>,
+&nbsp;&nbsp;showConfirmButton: <span class="val">false</span>,
+	});</pre>
+	</li>
+
 </ul>
 
 
@@ -221,6 +234,11 @@
 		<td><b>allowOutsideClick</b></td>
 		<td><i>false</i></td>
 		<td>If set to <strong>true</strong>, the user can dismiss the modal by clicking outside it.</td>
+	</tr>
+		<tr>
+		<td><b>showConfirmButton</b></td>
+		<td><i>true</i></td>
+		<td>If set to <strong>false</strong>, the confirm button will be hidden. Useful for loading screens.</td>
 	</tr>
 	<tr>
 		<td><b>showCancelButton</b></td>
@@ -355,6 +373,15 @@ document.querySelector('ul.examples li.custom-icon button').onclick = function()
 	});
 };
 
+document.querySelector('ul.examples li.loading-dialog button').onclick = function(){
+	swal({
+		title: "Hold on!",
+		text: "We're loading something here",
+		imageUrl: 'images/ajax-loader.gif',
+		showConfirmButton: false,
+		timer:2000
+	});
+};
 </script>
 
 
